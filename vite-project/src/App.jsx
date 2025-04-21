@@ -1,10 +1,15 @@
 import React from 'react';
+import Hero from './component/Hero'
 const App = () => {
-  const hudat = false;
+  const hudat = {
+    nameIs : "jani na",
+    age : 23,
+    language : "bal"
+  };
   return (
     <div>
       {
-        hudat?<h1>valo</h1>:<h1>valo na</h1>
+        <Hero hudai={hudat}/>
       }
     </div>
   );
