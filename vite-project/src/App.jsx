@@ -1,15 +1,15 @@
 import React from 'react';
 import Hero from './component/Hero'
+
+const baker_fun = () =>{
+  alert("parent class theke bolci");
+};
+
 const App = () => {
-  const hudat = {
-    nameIs : "jani na",
-    age : 23,
-    language : "bal"
-  };
   return (
     <div>
       {
-        <Hero hudai={hudat}/>
+        <Hero hudai={baker_fun}/>
       }
     </div>
   );
