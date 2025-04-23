@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Hero from './component/Hero'
 
-const baker_fun = () =>{
-  alert("parent class theke bolci");
-};
-
 const App = () => {
+  let my = useRef(0);
+  const baler_button = () => {
+    let heda = my.current++;
+    console.log(heda);
+  }
+
   return (
     <div>
-      {
-        <Hero hudai={baker_fun}/>
-      }
+      <button onClick={baler_button}>thela de</button>
     </div>
   );
 };
