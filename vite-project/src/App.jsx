@@ -1,16 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Hero from './component/Hero'
 
 const App = () => {
-  let my = useRef(0);
-  const baler_button = () => {
-    let heda = my.current++;
-    console.log(heda);
-  }
+  const [number, setsumber] = useState(0);
 
   return (
     <div>
-      <button onClick={baler_button}>thela de</button>
+      <h1>number:{number}</h1>
+      <button onClick={()=>setsumber(number+1)}>click me</button>
     </div>
   );
 };
