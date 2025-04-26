@@ -15,7 +15,7 @@ function App() {
       <div>
         <input type="text" name="" id="" ref={userInput}/>
         <button onClick={change}>click me</button>
-        <p>the input you provided: {list}</p>
+        <p>the input you provided : {list}</p>
       </div>
     </>
   )
