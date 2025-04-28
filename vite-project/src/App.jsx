@@ -1,29 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Hero from './component/Hero'
 
 const App = () => {
-  const [newOBJ, setOBJ] = useState({
-    key1:"value 1",
-    key2:"value 2",
-    key3:"value 3",
-  });
+  const [Data, setData] = useState([]);
 
-  const change = ()=>{
-    setOBJ(
-      preobj =>({
-        ...preobj,
-        key1:"new value 1",
-        key2:"new value 2",
-      })
-    )
-  }
+  useEffect( ()=>{
+    (async ()=>{
+      let responce = await fetch("https://dummyjson.com/products");
+      let data = await responce.json();
+      setData(data);
+    })()
+
+  },[])
 
   return (
     <div>
-      <h1>New Object:{newOBJ.key1}</h1>
-      <h1>New Object:{newOBJ.key2}</h1>
-      <h1>New Object:{newOBJ.key3}</h1>
-      <button onClick={change}>click me</button>
+      {JSON.stringify(Data)}
     </div>
   );
 };
