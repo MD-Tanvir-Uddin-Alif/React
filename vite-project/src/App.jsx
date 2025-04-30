@@ -1,22 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Hero from './component/Hero'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import Menupage from './pages/Menupage';
+import Productpage from './pages/Productpage';
+import NOtfounpage from './pages/NOtfounpage';
 
 const App = () => {
-  const [Data, setData] = useState([]);
-
-  useEffect( ()=>{
-    (async ()=>{
-      let responce = await fetch("https://dummyjson.com/products");
-      let data = await responce.json();
-      setData(data);
-    })()
-
-  },[])
-
   return (
-    <div>
-      {JSON.stringify(Data)}
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Homepage/>}></Route>
+      <Route path='/menu' element={<Menupage/>}></Route>
+      <Route path='/product' element={<Productpage/>}></Route>
+      <Route path='*' element={<NOtfounpage/>}></Route>
+    </Routes>
+    </BrowserRouter>
   );
 };
 
