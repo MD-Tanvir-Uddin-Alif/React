@@ -5,10 +5,12 @@ import Homepage from './pages/Homepage';
 import Menupage from './pages/Menupage';
 import Productpage from './pages/Productpage';
 import NOtfounpage from './pages/NOtfounpage';
+import Navlist from './component/Navlist';
 
 const App = () => {
   return (
     <BrowserRouter>
+    <Navlist/>
     <Routes>
       <Route path='/' element={<Homepage/>}></Route>
       <Route path='/menu' element={<Menupage/>}></Route>
