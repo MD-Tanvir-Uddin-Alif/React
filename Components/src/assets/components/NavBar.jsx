@@ -15,8 +15,12 @@ const NavBar = () => {
                     <NavLink to="/extra" className={({isActive})=>`font-medium text-sm transition ${isActive?'text-green-600':'text-black'}`}>Extra</NavLink>
                 </div>
                 <div className='flex justify-between space-x-8 md:space-x-8'>
+                <NavLink to="/register">
                 <button className="rounded-md bg-green-400 px-4 py-2 text-sm font-medium text-white">SignUP</button>
+                </NavLink>
+                <NavLink to="/login">
                 <button class="rounded-md px-4 py-2 text-black text-sm font-medium hover:bg-green-400 hover:text-white">Login</button>
+                </NavLink>
                 </div>
             </div>
         </nav>
