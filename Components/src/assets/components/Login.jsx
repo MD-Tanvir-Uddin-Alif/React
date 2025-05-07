@@ -28,7 +28,9 @@ const Login = () => {
 
             if(responce.status === 200){
                 setSucess("Loign sucessfully");
+                const token = localStorage.setItem('token', responce.data.token);
                 console.log("user info: ", responce.data);
+                // console.log(token);
             }
 
         }catch(err){

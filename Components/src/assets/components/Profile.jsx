@@ -21,6 +21,7 @@ const Profile = () => {
                     headers:{
                         Authorization: `Bearer ${token}`,
                     },
+                    credentials:'include'
                 });
 
                 setprofile(responce.data);
