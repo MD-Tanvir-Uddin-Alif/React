@@ -5,6 +5,8 @@ import Home from "./assets/components/Home"
 import Register from "./assets/components/Register"
 import Login from "./assets/components/Login"
 import Profile from "./assets/components/Profile"
+import ProductList from "./assets/components/ProductList"
+import About from "./assets/components/About"
 function App() {
 
   return (
@@ -13,6 +15,7 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
+          <Route path="/about" element={<About/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
