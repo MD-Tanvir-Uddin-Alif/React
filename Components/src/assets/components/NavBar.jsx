@@ -11,7 +11,7 @@ const NavBar = () => {
                 </div>
                 <div className='flex items-center space-x-8 px-8 md:space-x-8'>
                     <NavLink to="/" className={({isActive})=>`font-medium text-sm transition ${isActive?'text-green-600':'text-black'}`}>Home</NavLink>
-                    <NavLink to="/about" className={({isActive})=>`font-medium text-sm transition ${isActive?'text-green-600':'text-black'}`}>About</NavLink>
+                    <NavLink to="/product" className={({isActive})=>`font-medium text-sm transition ${isActive?'text-green-600':'text-black'}`}>Product</NavLink>
                     <NavLink to="/profile" className={({isActive})=>`font-medium text-sm transition ${isActive?'text-green-600':'text-black'}`}>Extra</NavLink>
                 </div>
                 <div className='flex justify-between space-x-8 md:space-x-8'>

@@ -1,11 +1,15 @@
 import React from 'react'
 import ProductList from './ProductList'
+import { useParams } from 'react-router-dom'
+import ProductDetails from './ProductDetails'
 
 const About = () => {
+
+  const {id} = useParams();
+
   return (
     <div>
-        <h1>jh</h1>
-        <ProductList/>
+        {id? <ProductDetails/>:<ProductList/>}
     </div>
   )
 }
