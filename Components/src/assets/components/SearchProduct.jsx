@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SearchProduct = () => {
-
-    const [query, setQuery] = useState('');
-    const [product, setProduct] = useState([]);
-
-    
-
-
   return (
-    <div></div>
+    <div>SearchProduct</div>
   )
 }
 
