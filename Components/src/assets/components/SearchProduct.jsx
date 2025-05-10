@@ -1,9 +1,7 @@
 import React from 'react'
 
-const SearchProduct = () => {
+export const SearchProduct = () => {
   return (
     <div>SearchProduct</div>
   )
 }
-
-export default SearchProduct
