@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { ProductCard } from './ProductCard';
 
 const SearchProduct = () => {
 
-  const [query, setQuery] = useParams('');
-  const [products, setProducts] = useParams([]);
+  const [query, setQuery] = useState('')
+  const [products, setProducts] = useState([]);
 
   const handleSearch = async (e)=>{
     e.preventDefault();
