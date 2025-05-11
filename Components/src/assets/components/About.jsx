@@ -2,6 +2,7 @@ import React from 'react'
 import ProductList from './ProductList'
 import { useParams } from 'react-router-dom'
 import ProductDetails from './ProductDetails'
+import SearchProduct from './SearchProduct'
 
 const About = () => {
 
@@ -9,6 +10,7 @@ const About = () => {
 
   return (
     <div>
+        <SearchProduct/>
         {id? <ProductDetails/>:<ProductList/>}
     </div>
   )
